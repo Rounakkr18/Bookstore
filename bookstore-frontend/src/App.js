@@ -2,8 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BookList from './components/BookList';
-import AddBook from './components/AddBook';
-import EditBook from './components/EditBook';
+// import AddBook from './components/AddBook';
+// import EditBook from './components/EditBook';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -12,9 +12,10 @@ function App() {
       <Navbar />
       <div className="container mt-3">
         <Routes>
+          {/* <Route path="/" element={<h2>Welcome to the Bookstore 📚</h2>} /> */}
           <Route path="/" element={<BookList />} />
-          <Route path="/add" element={<AddBook />} />
-          <Route path="/edit/:id" element={<EditBook />} />
+          {/* <Route path="/add" element={<AddBook />} />
+          <Route path="/edit/:id" element={<EditBook />} /> */}
         </Routes>
       </div>
     </Router>
@@ -23,36 +24,3 @@ function App() {
 
 export default App;
 
-
-
-
-
-
-
-
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
