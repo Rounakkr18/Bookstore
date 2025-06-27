@@ -5,18 +5,23 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import EditBook from './components/EditBook';
 import Navbar from './components/Navbar';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="container mt-3">
-        <Routes>
-          {/* <Route path="/" element={<h2>Welcome to the Bookstore 📚</h2>} /> */}
-          <Route path="/" element={<BookList />} />
-          <Route path="/add" element={<AddBook />} />
-          <Route path="/edit/:id" element={<EditBook />} />
-        </Routes>
+      <div className="app-wrapper d-flex flex-column min-vh-100">
+        <Navbar />
+        <main className="container flex-grow-1 mt-4 mb-5">
+          <Routes>
+            <Route path="/" element={<BookList />} />
+            <Route path="/add" element={<AddBook />} />
+            <Route path="/edit/:id" element={<EditBook />} />
+          </Routes>
+        </main>
+        <footer className="footer text-center text-black py-3 footer-color">
+          <small>© 2025 YourBookstore. All rights reserved.</small>
+        </footer>
       </div>
     </Router>
   );

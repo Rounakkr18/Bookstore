@@ -42,34 +42,37 @@ function AddBook() {
   return (
     <div>
       <h2>Add New Book</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label>Title</label>
-          <input type="text" className="form-control" name="title" value={book.title} onChange={handleChange} required />
-        </div>
+      <div className="card shadow p-4">
+        {/* <h4>Add a New Book</h4> */}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label>Title</label>
+            <input type="text" className="form-control" name="title" value={book.title} onChange={handleChange} required />
+          </div>
 
-        <div className="mb-3">
-          <label>Author</label>
-          <input type="text" className="form-control" name="author" value={book.author} onChange={handleChange} required />
-        </div>
+          <div className="mb-3">
+            <label>Author</label>
+            <input type="text" className="form-control" name="author" value={book.author} onChange={handleChange} required />
+          </div>
 
-        <div className="mb-3">
-          <label>Category</label>
-          <input type="text" className="form-control" name="category" value={book.category} onChange={handleChange} />
-        </div>
+          <div className="mb-3">
+            <label>Category</label>
+            <input type="text" className="form-control" name="category" value={book.category} onChange={handleChange} />
+          </div>
 
-        <div className="mb-3">
-          <label>Price (₹)</label>
-          <input type="number" step="0.01" className="form-control" name="price" value={book.price} onChange={handleChange} required />
-        </div>
+          <div className="mb-3">
+            <label>Price (₹)</label>
+            <input type="number" step="0.01" className="form-control" name="price" value={book.price} onChange={handleChange} required />
+          </div>
 
-        <div className="mb-3">
-          <label>Stock</label>
-          <input type="number" className="form-control" name="stock" value={book.stock} onChange={handleChange} required />
-        </div>
+          <div className="mb-3">
+            <label>Stock</label>
+            <input type="number" className="form-control" name="stock" value={book.stock} onChange={handleChange} required />
+          </div>
 
-        <button type="submit" className="btn btn-success">Add Book</button>
-      </form>
+          <button type="submit" className="btn btn-success">Add Book</button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -51,6 +51,7 @@ function EditBook() {
   return (
     <div>
       <h2>Edit Book</h2>
+      <div className="card shadow p-4">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label>Title</label>
@@ -79,6 +80,7 @@ function EditBook() {
 
         <button type="submit" className="btn btn-primary">Update Book</button>
       </form>
+      </div>
     </div>
   );
 }

@@ -74,8 +74,8 @@ function BookList() {
       </div>
 
       {/* 📘 Book Table */}
-      <table className="table table-bordered table-hover">
-        <thead className="table-dark">
+      <table className="table table-hover table-bordered shadow-sm rounded">  
+        <thead className="table-dark text-center small">
           <tr>
             <th>ID</th><th>Title</th><th>Author</th><th>Category</th><th>Price</th><th>Stock</th><th>Actions</th>
           </tr>
@@ -83,7 +83,9 @@ function BookList() {
         <tbody>
           {books.length === 0 ? (
             <tr>
-              <td colSpan="7" className="text-center">No books found.</td>
+              <td colSpan="7" className="text-center text-muted">
+                <i className="bi bi-emoji-frown"></i> No books found. Try adding one!
+              </td>
             </tr>
           ) : (
             books.map(book => (
@@ -91,8 +93,11 @@ function BookList() {
                 <td>{book.id}</td><td>{book.title}</td><td>{book.author}</td>
                 <td>{book.category}</td><td>{book.price}</td><td>{book.stock}</td>
                 <td>
-                  <Link to={`/edit/${book.id}`} className="btn btn-sm btn-primary me-2">Edit</Link>
-                  <button className="btn btn-sm btn-danger" onClick={() => deleteBook(book.id)}>Delete</button>
+                  <Link to={`/edit/${book.id}`} className="btn btn-sm btn-outline-warning me-2">
+                  <i className="bi bi-pencil-square"></i> Edit</Link>
+                  <button className="btn btn-sm btn-outline-danger" onClick={() => deleteBook(book.id)}>
+                    <i className="bi bi-trash"></i> Delete
+                  </button>
                 </td>
               </tr>
             ))
