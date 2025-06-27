@@ -36,5 +36,21 @@ public class BookService {
     public void deleteBook(Long id) {
         repo.deleteById(id);
     }
+
+    public Book updateBook(Long id, Book updatedBook) {
+    Book existingBook = repo.findById(id)
+        .orElseThrow(() -> new RuntimeException("Book not found"));
+
+    existingBook.setTitle(updatedBook.getTitle());
+    existingBook.setAuthor(updatedBook.getAuthor());
+    existingBook.setCategory(updatedBook.getCategory());
+    existingBook.setPrice(updatedBook.getPrice());
+    existingBook.setStock(updatedBook.getStock());
+
+    return repo.save(existingBook);
+    }
 }
+
+
+
 
