@@ -41,6 +41,7 @@ main {
 .footer-color {
   background-color: 	#fdf6e3; /* same as bg-dark */
   color: #ffffff;
+  width: 100%;
 }
 
 .nav-color {
@@ -56,3 +57,11 @@ main {
     transform: rotate(360deg);
   }
 }
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+

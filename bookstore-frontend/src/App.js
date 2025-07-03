@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="app-wrapper d-flex flex-column min-vh-100">
         <Navbar />
-        <main className="container flex-grow-1 mt-4 mb-5">
+        <main className="container-fluid px-4 flex-grow-1 mt-4 mb-5">
           <Routes>
             <Route path="/" element={<BookList />} />
             <Route path="/add" element={<AddBook />} />
