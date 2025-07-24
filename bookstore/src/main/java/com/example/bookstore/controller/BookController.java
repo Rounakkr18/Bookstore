@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bookstore.model.Book;
 import com.example.bookstore.service.BookService;
-@CrossOrigin(origins = "http://localhost:3000")
+// @CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://bookstore-one-alpha.vercel.app/")
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
