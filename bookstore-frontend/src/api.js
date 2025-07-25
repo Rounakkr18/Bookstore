@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // baseURL: 'http://localhost:8080/api', // Your Spring Boot backend base URL
-  baseURL: 'https://bookstore-backend-69kb.onrender.com/api', // Your Spring Boot backend base URL
+  baseURL: process.env.REACT_APP_API_BASE_URL,
 });
 
 export default api;
